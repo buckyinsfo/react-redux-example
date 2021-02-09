@@ -76,12 +76,12 @@ const iceCreamReducer = (state = initialIceCreamState, action) => {
 
 // *** Our store
 // 1st responsibility
-const store = createStore(reducer)
-// const rootReducer = combineReducers({
-//     cake: cakeReducer, 
-//     iceCream: iceCreamReducer
-// })
-// const store = createStore(rootReducer)
+// const store = createStore(reducer)
+const rootReducer = combineReducers({
+    cake: cakeReducer, 
+    iceCream: iceCreamReducer
+})
+const store = createStore(rootReducer)
 
 // 2nd respinsibility
 console.log('Initial state', store.getState())
