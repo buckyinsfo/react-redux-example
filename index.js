@@ -1,6 +1,10 @@
 const redux = require('redux')
+const reduxLogger = require('redux-logger')
+
 const createStore = redux.createStore
 const combineReducers = redux.combineReducers
+const applyMiddleware = redux.applyMiddleware
+const logger = reduxLogger.createLogger()
 
 const BUY_CAKE = 'BUY_CAKE'
 const BUY_ICECREAM = 'BUY_ICECREAM'
@@ -81,13 +85,14 @@ const rootReducer = combineReducers({
     cake: cakeReducer, 
     iceCream: iceCreamReducer
 })
-const store = createStore(rootReducer)
+const store = createStore(rootReducer, applyMiddleware(logger))
 
 // 2nd respinsibility
 console.log('Initial state', store.getState())
 
 // 4th responsibility
-const unsubscribe = store.subscribe(() => console.log('Updated state', store.getState()))
+//const unsubscribe = store.subscribe(() => console.log('Updated state', store.getState()))
+const unsubscribe = store.subscribe(() => {})  // with middleware handling logging. 
 
 // 3rd responsibility
 store.dispatch(buyCake())
