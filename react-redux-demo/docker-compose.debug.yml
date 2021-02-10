@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  reduxdemo:
-    image: reduxdemo
+  reactreduxdemo:
+    image: reactreduxdemo
     build:
       context: .
       dockerfile: ./Dockerfile
