@@ -2,7 +2,6 @@ import { BUY_CAKE } from './cakeTypes'
 
 const initialState = {
     numOfCakes: 10,
-    // numOfIceCream: 20
 }
 
 // (previousState, action) => newState
