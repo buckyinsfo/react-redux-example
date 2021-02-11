@@ -6,7 +6,6 @@ const createStore = redux.createStore
 const applyMiddleware = redux.applyMiddleware
 
 
-
 const initialState = {
     loading: false,
     users: [],
@@ -80,4 +79,4 @@ const fetchUsers = () => {
 
 const store = createStore(reducer, applyMiddleware(thunkMiddleware))
 store.subscribe(() => {console.log(store.getState())})
-store.dispatch(fetchUsers())
+store.dispatch(fetchUsers()),
