@@ -3,6 +3,8 @@ import store from './redux/store'
 import CakeContainer from './components/CakeContainer'
 import HooksCakeContainer from './components/HooksCakeContainer'
 import IceCreamContainer from './components/IceCreamContainer'
+import PayloadCakeContainer from './components/PayloadCakeContainer'
+import HooksPayloadCakeContainer from './components/HooksPayloadCakeContainer'
 
 import './App.css';
 
@@ -13,6 +15,8 @@ function App() {
         <HooksCakeContainer />
         <CakeContainer />
         <IceCreamContainer />
+        <PayloadCakeContainer />
+        <HooksPayloadCakeContainer />
       </div>
     </Provider>
   );
