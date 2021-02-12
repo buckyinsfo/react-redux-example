@@ -5,6 +5,7 @@ import HooksCakeContainer from './components/HooksCakeContainer'
 import IceCreamContainer from './components/IceCreamContainer'
 import PayloadCakeContainer from './components/PayloadCakeContainer'
 import HooksPayloadCakeContainer from './components/HooksPayloadCakeContainer'
+import ItemContainer from './components/ItemContainer'
 
 import './App.css';
 
@@ -12,6 +13,8 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
+        <ItemContainer cake />
+        <ItemContainer />
         <HooksCakeContainer />
         <CakeContainer />
         <IceCreamContainer />
@@ -19,7 +22,7 @@ function App() {
         <HooksPayloadCakeContainer />
       </div>
     </Provider>
-  );
+  )
 }
 
 export default App;

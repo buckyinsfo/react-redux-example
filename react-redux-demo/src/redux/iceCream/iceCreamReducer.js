@@ -1,7 +1,7 @@
 import { BUY_ICECREAM } from './iceCreamTypes'
 
 const initialState = {
-    numOfIceCream: 20
+    numOfIceCreams: 20
 }
 
 // (previousState, action) => newState
@@ -10,7 +10,7 @@ const initialState = {
         case BUY_ICECREAM:
             return {
                 ...state,
-                numOfIceCream: state.numOfIceCream - 1
+                numOfIceCreams: state.numOfIceCreams - 1
             }
 
         default:
