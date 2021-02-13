@@ -1,8 +1,8 @@
 import {
     FETCH_USERS_REQUEST,
-    FETCH_USERS_REQUEST,
-    FETCH_USERS_REQUEST
-} from 'userTypes'
+    FETCH_USERS_SUCCESS,
+    FETCH_USERS_FAILURE
+} from './userTypes'
 
 const initialState = {
     loading: false,
